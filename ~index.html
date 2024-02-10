@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>Collapsible sidebar using Bootstrap 4</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+      integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+      crossorigin="anonymous"
+    />
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="css/style2.css" />
+    <link rel="stylesheet" href="css/agnis-style.css" />
+    <!-- Scrollbar Custom CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css"
+    />
+
+    <!-- Font Awesome JS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.0/css/font-awesome.css"
+      integrity="sha512-72McA95q/YhjwmWFMGe8RI3aZIMCTJWPBbV8iQY3jy1z9+bi6+jHnERuNrDPo/WGYEzzNs4WdHNyyEr/yXJ9pA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.0/css/font-awesome.min.css"
+      integrity="sha512-FEQLazq9ecqLN5T6wWq26hCZf7kPqUbFC9vsHNbXMJtSZZWAcbJspT+/NEAQkBfFReZ8r9QlA9JHaAuo28MTJA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script> -->
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <!-- Sidebar  -->
+      <nav id="sidebar">
+        <div class="sidebar-header">
+          <h3>Classified</h3>
+        </div>
+
+        <ul class="list-unstyled components">
+          <!-- <p>Dummy Heading</p> -->
+          <li class="active">
+            <a
+              href="#homeSubmenu"
+              data-toggle="collapse"
+              aria-expanded="false"
+              class="dropdown-toggle"
+              >जागविषयक</a
+            >
+            <ul class="collapse list-unstyled" id="homeSubmenu">
+              <li>
+                <a href="spatial.html">banglo</a>
+              </li>
+              <li>
+                <a href="spatial.html">Plot</a>
+              </li>
+              <li>
+                <a href="spatial.html">Flat</a>
+              </li>
+              <li>
+                <a href="spatial.html">Farm land</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a
+              href="#pageSubmenu1"
+              data-toggle="collapse"
+              aria-expanded="false"
+              class="dropdown-toggle"
+              >वाहनविषयक</a
+            >
+            <ul class="collapse list-unstyled" id="pageSubmenu1">
+              <li>
+                <a href="#">car</a>
+              </li>
+              <li>
+                <a href="#">bike</a>
+              </li>
+              <li>
+                <a href="#">scooty</a>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <a
+              href="#pageSubmenu"
+              data-toggle="collapse"
+              aria-expanded="false"
+              class="dropdown-toggle"
+              >पर्यटन</a
+            >
+            <ul class="collapse list-unstyled" id="pageSubmenu">
+              <li>
+                <a href="#">Hill station</a>
+              </li>
+              <li>
+                <a href="#">Beach</a>
+              </li>
+              <li>
+                <a href="#">Mountains</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">जोतिष्यविषयक</a>
+          </li>
+          <li>
+            <a href="#">आरोग्यविषयक </a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Page Content  -->
+      <div id="content">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container-fluid">
+            <button type="button" id="sidebarCollapse" class="btn btn-dark">
+              <i class="fa fa-align-left" aria-hidden="true"></i>
+
+              <span>Toggle Sidebar</span>
+            </button>
+            <button
+              class="btn btn-dark d-inline-block d-lg-none ml-auto"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <i class="fas fa-align-justify"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="nav navbar-nav ml-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="http://localhost/www/login.html"
+                    >Login</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Register</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <div class="content p-1">
+          <section class="content">
+            <div class="row pb-4">
+              <div class="col-sm-6">
+                <h3>जागा विषयक</h3>
+              </div>
+            </div>
+            <div class="container-fluid">
+              <figure>
+                <div class="card">
+                  <div class="card-header">
+                    <h5>बंगला विकणे आहे</h5>
+                  </div>
+                  <div class="card-body">
+                    <p class="card-text">
+                      २ बी एच के रो बंगलो विकणे आहे. सर्व सोईनीयुक्त . बोअरींग
+                      स्वतंत्र. मोरेवाडी , कोल्हापूर. मो. ९८९०८५८४०८, ७५५९११७१११
+                    </p>
+                  </div>
+                </div>
+              </figure>
+              <figure>
+                <div class="card">
+                  <div class="card-header">
+                    <h5>बंगला विकणे आहे</h5>
+                  </div>
+                  <div class="card-body">
+                    <p class="card-text">
+                      २ बी एच के रो बंगलो विकणे आहे. सर्व सोईनीयुक्त
+                    </p>
+                  </div>
+                </div>
+              </figure>
+              <figure>
+                <div class="card">
+                  <div class="card-header">
+                    <h5>बंगला विकणे आहे</h5>
+                  </div>
+                  <div class="card-body">
+                    <p class="card-text">
+                      आर सी सी घर विकणे १ व २ मजली ३/२ रूम घाहनवट देणे. एक्सचेंज
+                      साठी छोटे घर जागा. ९९२२८३६८३६
+                    </p>
+                  </div>
+                </div>
+              </figure>
+
+              <figure>
+                <div class="card">
+                  <div class="card-header">
+                    <h5>बंगला विकणे आहे</h5>
+                  </div>
+                  <div class="card-body">
+                    <p class="card-text">
+                      नवीन २ व ३ बी एच के रो-बंगलो विकणे आहे. बोन्द्रे नगर रिंग
+                      रोड टच , कोतवालनगर, कोल्हापूर . संपर्क मो. ८८०५४९३६२४,
+                      ८४५९९३६३९३, ७९७२६४०३५०
+                    </p>
+                  </div>
+                </div>
+              </figure>
+
+              <figure>
+                <div class="card">
+                  <div class="card-header">
+                    <h5>बंगला विकणे आहे</h5>
+                  </div>
+                  <div class="card-body">
+                    <p class="card-text">
+                      आर सी सी घर विकणे १ व २ मजली ३/२ रूम घाहनवट देणे. एक्सचेंज
+                      साठी छोटे घर जागा. ९९२२८३६८३६
+                    </p>
+                  </div>
+                </div>
+              </figure>
+              <figure>
+                <div class="card">
+                  <div class="card-header">
+                    <h5>बंगला विकणे आहे</h5>
+                  </div>
+                  <div class="card-body">
+                    <p class="card-text">
+                      आर सी सी घर विकणे १ व २ मजली ३/२ रूम घाहनवट देणे. एक्सचेंज
+                      साठी छोटे घर जागा. ९९२२८३६८३६
+                    </p>
+                  </div>
+                </div>
+              </figure>
+              <figure>
+                <div class="card">
+                  <div class="card-header">
+                    <h5>बंगला विकणे आहे</h5>
+                  </div>
+                  <div class="card-body">
+                    <p class="card-text">
+                      नवीन २ व ३ बी एच के रो-बंगलो विकणे आहे. बोन्द्रे नगर रिंग
+                      रोड टच , कोतवालनगर, कोल्हापूर . संपर्क मो. ८८०५४९३६२४,
+                      ८४५९९३६३९३, ७९७२६४०३५०
+                    </p>
+                  </div>
+                </div>
+              </figure>
+              <figure>
+                <div class="card">
+                  <div class="card-header">
+                    <h5>बंगला विकणे आहे</h5>
+                  </div>
+                  <div class="card-body">
+                    <p class="card-text">
+                      नवीन २ व ३ बी एच के रो-बंगलो विकणे आहे. बोन्द्रे नगर रिंग
+                      रोड टच , कोतवालनगर, कोल्हापूर . संपर्क मो. ८८०५४९३६२४,
+                      ८४५९९३६३९३, ७९७२६४०३५०
+                    </p>
+                  </div>
+                </div>
+              </figure>
+              <figure>
+                <div class="card">
+                  <div class="card-header">
+                    <h5>बंगला विकणे आहे</h5>
+                  </div>
+                  <div class="card-body">
+                    <p class="card-text">
+                      नवीन २ व ३ बी एच के रो-बंगलो विकणे आहे. बोन्द्रे नगर रिंग
+                      रोड टच , कोतवालनगर, कोल्हापूर . संपर्क मो. ८८०५४९३६२४,
+                      ८४५९९३६३९३, ७९७२६४०३५०
+                    </p>
+                  </div>
+                </div>
+              </figure>
+              <figure>
+                <div class="card">
+                  <div class="card-header">
+                    <h5>बंगला विकणे आहे</h5>
+                  </div>
+                  <div class="card-body">
+                    <p class="card-text">
+                      नवीन २ व ३ बी एच के रो बंगलो विकणे आहे
+                    </p>
+                  </div>
+                </div>
+              </figure>
+              <figure>
+                <div class="card">
+                  <div class="card-header">
+                    <h5>बंगला विकणे आहे</h5>
+                  </div>
+                  <div class="card-body">
+                    <p class="card-text">
+                      नवीन २ व ३ बी एच के रो-बंगलो विकणे आहे. बोन्द्रे नगर रिंग
+                      रोड टच , कोतवालनगर, कोल्हापूर . संपर्क मो. ८८०५४९३६२४,
+                      ८४५९९३६३९३, ७९७२६४०३५०
+                    </p>
+                  </div>
+                </div>
+              </figure>
+              <figure>
+                <div class="card">
+                  <div class="card-header">
+                    <h5>बंगला विकणे आहे</h5>
+                  </div>
+                  <div class="card-body">
+                    <p class="card-text">
+                      आर सी सी घर विकणे १ व २ मजली ३/२ रूम घाहनवट देणे. एक्सचेंज
+                      साठी छोटे घर जागा. ९९२२८३६८३६
+                    </p>
+                  </div>
+                </div>
+              </figure>
+              <figure>
+                <div class="card">
+                  <div class="card-header">
+                    <h5>बंगला विकणे आहे</h5>
+                  </div>
+                  <div class="card-body">
+                    <p class="card-text">पुईखडी 865, 1041 बांधकाम</p>
+                  </div>
+                </div>
+              </figure>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Popper.JS -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+      integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Bootstrap JS -->
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
+      integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+      crossorigin="anonymous"
+    ></script>
+    <!-- jQuery Custom Scroller CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $("#sidebar").mCustomScrollbar({
+          theme: "minimal",
+        });
+
+        $("#sidebarCollapse").on("click", function () {
+          $("#sidebar, #content").toggleClass("active");
+          $(".collapse.in").toggleClass("in");
+          $("a[aria-expanded=true]").attr("aria-expanded", "false");
+        });
+      });
+    </script>
+  </body>
+</html>
